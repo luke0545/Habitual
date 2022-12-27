@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/media/my_dood.jpg">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/activity.css">
+    <link rel="stylesheet" type="text/css" href="css/buttons.css">
+    <script src="https://kit.fontawesome.com/f9873acb08.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/activity.js" defer></script>
+    <script defer src="js/main.js" defer></script>
+    <title>Activity</title>
+</head>
+<body>
+    <!-- Nav Bar -->
+    <div class="navbar">
+        <a class="title" href="index.html">Habitual</a>
+        <a href="activity.html">Activity</a>
+        <a href="stacking.html">Stacking</a>
+        <a href="#">All Habits</a>
+    </div>
+    <p class="activity-text">Activity Per Habit</p><hr>
+    <!--Repetitions Chart container-->
+    <div class="repetitions-chart-container">
+        <div class="select-habit-container">
+             <div class="select-habit-graph-text">
+                <h4 class="v-center">Select a habit</h4>
+            </div>
+            <div class="habit-select-container">
+                <!--all habits from database-->
+            </div>
+        </div>
+        <div class="habit-overview-container">
+            <p class="overview-container-header">&nbsp;</p>
+
+            <!--TABS-->
+            <div class="tab">
+                <button class="tablinks" id="defaultOpen">Week</button>
+                <button class="tablinks">Month</button>
+                <button class="tablinks">Progress</button>
+                <button class="tablinks">Info</button>
+            </div>
+
+            <!--WEEK TAB-->
+            <div id="Week" class="tabcontent">
+                <div class="week-header-container">
+                    <i class="fa-solid fa-angle-left" id="week-arrow-left"></i>
+                    <h3 id="week-header">This Week</h3>
+                    <i class="fa-solid fa-angle-right" id="week-arrow-right"></i>
+                </div>
+
+                <canvas id="repetitions-chart"></canvas>
+                <p class="percent-increase-week"><p id="percent-change"></p></p>
+                <p class="percent-decrease-week"><p id="percent-change"></p></p>
+            </div>
+
+            <!--MONTH TAB-->              
+            <div id="Month" class="tabcontent">
+                <!--SIDE BOX-->
+                <div class="calendar-info-box">
+                    
+                </div>
+                <!--Month Calendar-->
+                <div class="calendar-container">
+                    <div class="calendar">
+                        <div class="month">
+                            <i class="fas fa-angle-left prev"></i>
+                            <div class="date">
+                                <h1>Select A Habit</h1>
+                                <p></p>
+                            </div>
+                            <i class="fas fa-angle-right next"></i>
+                        </div>
+                        <div class="weekdays">
+                            <div>Sun</div>
+                            <div>Mon</div>
+                            <div>Tue</div>
+                            <div>Wed</div>
+                            <div>Thu</div>
+                            <div>Fri</div>
+                            <div>Sat</div>
+                        </div>
+                        <div class="days">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--PROGRESS TAB-->
+            <div id="Progress" class="tabcontent">
+                <!--header-->
+                <h3>Approximated Progress</h3>
+
+                <!--line chart canvas-->
+                <canvas id="progressChart" width="600" height="400"></canvas>
+            </div>
+
+            <!--INFO TAB-->              
+            <div id="Info" class="tabcontent">
+                <h3>Info</h3>
+                <hr>
+
+                <p class="label-title">Date Added: </p>
+                <p class="result-number" id="date-added"></p>
+                <hr class="info-hr">
+
+                <p class="label-title">Anticipated Repetitions: </p>
+                <p class="result-text">Per Day</p>
+                <p class="result-number" id="anticipated-rep-count"></p>
+                <hr class="info-hr">
+
+                <p class="label-title">Daily Average Repetitions: </p>
+                <p class="result-number" id="avg-rep-count"></p>
+                <hr class="info-hr">
+
+                <p class="label-title">Total Repetitions: </p>
+                <p class="result-number" id="total-rep-count"></p>
+                <hr class="info-hr">
+
+
+            </div>
+
+        </div>
+       
+    </div>
+
+
+
+</body>
+</html>

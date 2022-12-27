@@ -1,0 +1,552 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@500&family=Comfortaa:wght@600&family=Cormorant:wght@400;600&family=Lato&family=League+Spartan:wght@300&family=Poiret+One&display=swap');
+
+body
+{
+    /* OLD COLORS 
+    background-color: white;
+    color: black;
+    */
+    background-color: rgb(31, 31, 31);
+    margin: 2rem;
+    font-family: 'Lato', sans-serif;
+    color: rgb(219, 219, 219);
+}
+.website-title
+{
+    font-size: 18pt;
+}
+.home-page-container
+{
+    user-select: none;
+    justify-content: center;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+.type-habit-container-modal
+{
+    display: none;
+    border-radius: 2px;
+    position: fixed;
+    padding: 25px;
+    text-align: center;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    /* OLD background-color: rgb(202, 212, 220); */
+    /* background-color:rgb(50, 56, 67); */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.35); /* Black w/ opacity */
+    z-index: 9;
+    overflow: auto;
+}
+#new-habit-form
+{
+    background-color: rgb(41, 48, 60);
+    margin: 14% auto; /* 14% from the top and centered */
+    padding: 20px;
+    border: 1px solid rgb(70, 70, 70);
+    width: 620px;
+    height: 440px;
+}
+/* The Close Button */
+.close-modal 
+{
+    margin-top: 0px;
+    color: #aaa;
+    float: right;
+    font-size: 35px;
+    font-weight: bold;
+}
+.close-modal:hover, .close-modal:focus 
+{
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+ /* OLD ADD HABIT CONTAINER
+.type-habit-container-modal
+{
+    float: left;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 2px;
+    position: relative;
+    padding: 25px;
+    text-align: center;
+    margin: auto;
+    margin-top: 330px;
+    width: 320px;
+    height: 320px;
+    /* OLD background-color: rgb(202, 212, 220); */
+    /* background-color:rgb(50, 56, 67);
+} */
+#habit-title:focus
+{
+    transition: 1.0s;
+    box-shadow: none;
+    outline: none;
+    
+}
+#habit-title
+{
+    transition: 1.0;
+    font-size: 16px;
+    text-align: center;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    width: 200px;
+    padding: 8px;
+    margin-top: 30px;
+    border-style: solid;
+    /* OLD border-color: rgb(217, 233, 245); */
+    border-color: rgb(217, 233, 245);
+    background-color:rgb(50, 56, 67);
+    color: white;
+}
+.add-habit-header
+{
+    padding: 30px;
+    justify-content: center;
+    margin: auto;
+    font-size: 22px;
+}
+.add-form-text
+{
+    font-size: 18px;
+    font-weight: bold;
+}
+#habit-title:focus::placeholder
+{
+    opacity: 0%;
+}
+#habit-title:required
+{
+    /* OLD background-color: rgb(202, 212, 220); */
+    background-color:rgb(50, 56, 67);
+    color: white;
+}
+.habit-list-container
+{
+    position: relative;
+    justify-content: center;
+    margin: auto;
+    width: 475px;
+}
+.habit-container
+{
+    z-index: 1;
+    justify-content: center;
+    border-radius: 2px;
+    position: relative;
+    text-align: center;
+    /* OLD background-color: rgb(246, 234, 234); */
+    background-color:rgb(50, 56, 67);
+    height: 875px;
+    width: 550px;
+    margin-top: 100px;
+    overflow-y: scroll;
+    overflow-wrap: normal;
+    scrollbar-width: thin;
+    /* OLD scrollbar-color: rgb(179, 195, 215) rgb(246, 234, 234); */
+    scrollbar-color: rgb(120, 130, 142) rgb(205, 195, 195);
+    
+}
+.single-habit-block-good
+{
+    position: relative;
+    margin: 35px;
+    padding: 10px;
+    text-align: center;
+    height: 65px;
+    border-radius: 2px;
+    /* OLD background-color: rgb(191, 201, 181); */
+    background-color: rgb(88, 98, 78);
+}
+.single-habit-block-bad
+{
+    position: relative;
+    margin: 35px;
+    padding: 10px;
+    text-align: center;
+    height: 65px;
+    border-radius: 2px;
+    /* OLD sbackground-color: rgb(203, 172, 172); */
+    background-color: rgb(109, 78, 78);
+}
+#recorded-habit-text
+{
+    position: relative;
+    margin-left: 45px;
+    margin-right: 40px;
+    font-size: 1.5rem;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4%;
+
+}
+.check-off-text
+{
+    float: left;
+    border-radius: 2px;
+    text-align: center;
+    /* OLD background-color: rgb(246, 234, 234); */
+    background-color:rgb(50, 56, 67);
+    height: 75px;
+    width: 550px;
+    margin-top: 45px;
+    padding: 0px;
+    font-size: 1.3rem;
+    z-index: -1;
+}
+
+/* ----- NAVBAR ----- */
+.navbar 
+{
+    display: flex;
+    background-color: rgb(50, 56, 67);
+}
+  
+  /* Style the navigation bar links */
+.navbar a 
+{
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+.navbar .title
+{
+    font-weight: bold;
+    font-size: 18px;
+}
+  
+/* Change color on hover */
+.navbar a:hover 
+{
+    background-color: #ddd;
+    color: black;
+}
+
+  /* ----- CONTEXT MENU ----- */
+.context-menu
+{
+    display: none;
+    font-size: 16px;
+    position: absolute;
+    justify-content: center;
+    border-radius: 3px;
+    width: 200px;
+    background-color: rgb(48, 55, 70);
+    box-shadow: 5px 5px 5px rgb(50, 56, 67);
+    z-index: 8;
+}
+.context-menu ul
+{
+    list-style: none;
+    padding: 2px;
+}
+.context-menu ul li
+{
+    padding: 10px 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    margin-bottom: 3px;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(75, 97, 120);
+}
+.context-menu ul li:hover{
+    cursor: pointer;
+    background-color: #3c486c;
+}
+/* Delete Modal */
+.are-you-sure-delete
+{
+    display: none;
+    border-radius: 2px;
+    position: fixed;
+    padding: 25px;
+    text-align: center;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    /* OLD background-color: rgb(202, 212, 220); */
+    /* background-color:rgb(50, 56, 67); */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.35); /* Black w/ opacity */
+    z-index: 9;
+    overflow: auto;
+}
+.delete-modal-content
+{
+    position: relative;
+    background-color: #e0e3e9;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    margin-top: 60px;
+    width: 60%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+.delete-modal-header
+{
+    padding: 20px 16px;
+    background-color: #44495c;
+    color: white;
+    font-size: 22px;
+}
+.are-you-sure-delete ul
+{
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 2px;
+}
+.delete-modal-text-header
+{
+
+    position: relative;
+    margin: auto;
+    padding: 0;
+    width: 80%;
+
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    margin-top: 0px;
+}
+.delete-modal-subtext
+{
+    font-family: inherit;
+    font-weight: 200;
+    font-size: 18px;
+    color: black;
+}
+.are-you-sure-delete ul li
+{
+    display: block;
+    position: relative;
+    width: 25%;
+    padding: 10px 10px;
+    margin: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    letter-spacing: 3px;
+    align-items: center;
+    margin-bottom: 3px;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(75, 97, 120);
+}
+.are-you-sure-delete ul li:hover{
+    cursor: pointer;
+    background-color: #3c486c;
+}
+.plus-btn button
+{
+    z-index: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    font-size: 60px;
+    background-color: rgb(31, 31, 31);
+    margin-right: 20px;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    float: right;
+}
+.plus-btn
+{
+    height: 80px;
+}
+#habit-repetitions
+{
+    transition: 1.0;
+    font-size: 16px;
+    text-align: center;
+    margin: auto;
+    margin-left: 20px;
+    width: 30px;
+    padding: 8px;
+    margin-top: 15px;
+    border-style: solid;
+    /* OLD border-color: rgb(217, 233, 245); */
+    border-color: rgb(217, 233, 245);
+}
+#habit-repetitions:focus
+{
+    transition: 1.0s;
+    box-shadow: none;
+    outline: none;
+    
+}
+#habit-repetitions:focus::placeholder
+{
+    opacity: 0%;
+}
+#habit-repetitions:required
+{
+    /* OLD background-color: rgb(202, 212, 220); */
+    background-color:rgb(50, 56, 67);
+    color: white;
+}
+#per-day-week
+{
+    font-size: 14px;
+    padding: 5px;
+    border-radius: 0;
+    border: 1px;
+    border-style: solid;
+    border-color: rgb(155, 173, 186);
+    background-color:rgb(50, 56, 67);
+    color: white;
+}
+
+/* ----- ADD PREVIOUSLY COMPLETED REPETITION MODAL ----- */
+.add-previous-completed-modal
+{
+    display: none;
+    border-radius: 2px;
+    position: fixed;
+    padding: 25px;
+    text-align: center;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    /* OLD background-color: rgb(202, 212, 220); */
+    /* background-color:rgb(50, 56, 67); */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.35); /* Black w/ opacity */
+    z-index: 9;
+    overflow: auto;
+}
+.date-picker-modal
+{
+    background-color: rgb(41, 48, 60);
+    margin: 14% auto; /* 14% from the top and centered */
+    padding: 20px;
+    border: 1px solid rgb(70, 70, 70);
+    width: 530px;
+    height: 300px;
+}
+.date-picker-modal select
+{
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 4px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 40px;
+    width: 70px;
+    font: inherit;
+    background-color: #3c486c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+.date-picker-control
+{
+    width: 130px;
+    font: inherit;
+    height: 35px;
+    background-color: #3c486c;
+    color: white;
+    border: none;
+    user-select: none;
+}
+.time-picker-control
+{
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 4px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 30px;
+    width: 70px;
+    font: inherit;
+    background-color: #3c486c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+#date-time-select
+{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    border: 1px solid rgb(52, 67, 107);
+}
+.add-previous-completed-header
+{
+    display: block;
+    user-select: none;
+    font: inherit;
+    font-size: 22px;
+    padding-left: 20px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+#habit-name
+{
+    display: block;
+    user-select: none;
+    font: inherit;
+    font-size: 26px;
+    padding-left: 40px;
+}
+.add-new-rep-btn
+{
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 4px;
+    height: 45px;
+    width: 80px;
+    font: inherit;
+    background-color: #3c486c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+    margin-top: 40px;
+    transition: 0.2s;
+}
+.add-new-rep-btn:hover
+{
+    background-color: #2f3958;
+}
+.hr-min-colon
+{
+    display: inline;
+    font: inherit;
+    font-size: 30px;
+    font-weight: 500;
+}

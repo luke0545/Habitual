@@ -1,0 +1,288 @@
+/* ----- COMPLETED BUTTONS ----- */
+
+.completed-button-good
+{
+    display: inline-block;
+    position: absolute;
+    justify-content: center;
+    top: 22px;
+    left: 15px;
+    height: 39px;
+    max-width: 65px;
+    font-size: 22px;
+    font-weight: normal;
+    text-align: center;
+    color: rgb(38, 39, 52);
+    background-color: rgb(88, 98, 78);
+    border: 2px solid #73858a;
+    box-shadow: none;
+    transition: all 0.1s;
+}
+.completed-button-bad
+{
+    display: inline-block;
+    position: absolute;
+    justify-content: center;
+    top: 22px;
+    left: 15px;
+    height: 39px;
+    max-width: 65px;
+    font-size: 22px;
+    font-weight: normal;
+    text-align: center;
+    color: rgb(38, 39, 52);
+    background-color: rgb(109, 78, 78);
+    border: 2px solid #7f716d;
+    box-shadow: none;
+    transition: all 0.1s;
+}
+.completed-button-good span
+{
+    transition: 0.1s;
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    width: 30px;
+}
+.completed-button-bad span
+{
+    transition: 0.1s;
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    width: 30px;
+}
+/* On mouse-over, add a grey background color */
+.completed-button-good span:after
+{
+    content: '\ +';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -30px;
+    transition: 0.1s;
+    width: 25px;
+}
+.completed-button-bad span:after
+{
+    content: '\ +';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -30px;
+    transition: 0.1s;
+    width: 25px;
+}
+.completed-button-good:hover span
+{   
+    padding-right: 17px;
+    transition: 0.1s;
+}
+.completed-button-bad:hover span
+{   
+    padding-right: 17px;
+    transition: 0.1s;
+}
+.completed-button-good:hover span:after
+{
+    opacity: 1;
+    right: 0;
+}
+.completed-button-bad:hover span:after
+{
+    opacity: 1;
+    right: 0;
+}
+
+
+/* ----- GOOD-BAD RADIOS ----- */
+
+.radio-container 
+{
+    display: block;
+    position: relative;
+    padding-left: 15px;
+    margin-top: 15px;
+    margin-bottom: 0px;
+    cursor: pointer;
+    font-size: 20px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default radio button */
+  .radio-container input 
+  {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  .radio 
+  {
+    position: absolute;
+    top: 0;
+    left: 210px;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .radio-container:hover input ~ .radio 
+  {
+    background-color: rgb(218, 218, 218);
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .radio-container input:checked ~ .radio 
+  {
+    background-color: #5093c9;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .radio:after 
+  {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .radio-container input:checked ~ .radio:after 
+  {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .radio-container .radio:after 
+  {
+      top: 6.0px;
+      left: 6.2px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: white;
+  }
+
+
+/* ----- DIFFICULTY RADIOS ----- */
+
+.radio-diff-container 
+{
+    display: flex;
+    float: left;
+    left: 120px;
+    position: relative;
+    padding-left: 25px;
+    margin-left: 30px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    width: 5px;
+    margin-bottom: 0px;
+    cursor: pointer;
+    font-size: 18px;
+    user-select: none;
+  }
+
+  /* Hide the browser's default radio button */
+  .radio-diff-container input 
+  {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  .radio-diff
+  {
+    position: absolute;
+    top: 0;
+    margin-left: 0px;
+    height: 25px;
+    width: 25px;
+    background-color: rgb(117, 117, 117);
+    color:rgb(255, 255, 255);
+    border-radius: 20%;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .radio-diff-container:hover input ~ .radio-diff 
+  {
+    background-color: rgb(149, 149, 149);
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .radio-diff-container input:checked ~ .radio-diff 
+  {
+    background-color: #5093c9;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .radio-diff:after 
+  {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .radio-diff-container input:checked ~ .radio-diff:after 
+  {
+    display: block;
+  }
+
+
+/* ----- TRASH BUTTON ----- */
+
+.trash-container
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    
+
+}
+.trash-container button
+{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 30%;
+    right: 5%;
+    height: 30px;
+    width: 30px;
+    transition-duration: 0.15s;
+}
+.trash-container button:hover
+{
+    background-color: #8d8d8d;
+}
+
+
+/* ----- ADD BUTTON ----- */
+.add-btn
+{
+    justify-content: center;
+    /* OLD background-color: #97acd2; */
+    background-color: #6b89c0;
+    margin-top: 45px;
+    border: none;
+    border-radius: 2px;
+    text-align: center;
+    font-family: inherit;
+    font-size: 25;
+    padding: 12px 30px;
+    color: black;
+    cursor: pointer;
+    transition-duration: 0.1s;
+}
+.add-btn:hover
+{
+    background-color: rgb(77, 96, 139);
+}

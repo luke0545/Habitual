@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/media/my_dood.jpg">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/buttons.css">
+    <script src="https://kit.fontawesome.com/f9873acb08.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="js/index.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <title>Habit App</title>
+</head>
+<body>
+    <!-- Nav Bar -->
+    <div class="navbar">
+        <a class="title" href="index.html">Habitual</a>
+        <a href="activity.html">Activity</a>
+        <a href="stacking.html">Stacking</a>
+        <a href="#">All Habits</a>
+    </div>
+    <!-- <button class="activity-btn">Activity</button> -->
+    <div class="home-page-container">
+        <div class="habit-list-container">
+            <div class="check-off-text">
+                <h4>Check off what you've done today</h4>
+            </div>
+            <div class="habit-container">
+                <!--Individual habit blocks-->
+                <div class='single-habit-block-good'>
+                    <label class='completed-button-container'>
+                        <button type='habit-completed' class="completed-button-good"><span id="completed-button-span">0 </span></button>
+                    </label>
+                    <p id='recorded-habit-text'> Habit 1</p>
+                    <label class="trash-container">
+                        
+                    </label>
+                </div>
+            </div>
+        </div>
+         <!-- Context-menu -->
+        <div class='context-menu'>
+            <ul>
+                <li class='subtract-completed'><span></span><i class="fa-solid fa-minus"></i><span> 1</span></li>
+                <li class='add-completed'><span></span><i class="fa-solid fa-plus"></i><span> &nbsp; Previous Repetition</span></li>
+                <li class='edit-name'><span></span><i class="fa-solid fa-pen-to-square"></i><span> &nbsp; Edit Name</span></li>
+                <li class='delete-habit'><span></span><i class="fa-solid fa-trash"></i><span> &nbsp; Delete</span></li>
+            </ul>
+        </div>
+        <!-- "Are you sure"-modal -->
+        <div class='are-you-sure-delete'>
+            <div class="delete-modal-content">
+                <div class="delete-modal-header">
+                    <span class="close-modal">&times;</span>
+                    <p class="delete-modal-text-header">Are you sure?</p><p class="delete-modal-subtext"> This will remove all records for this habit, and is irreversible.</p>
+                </div>
+                <ul>
+                    <li class='are-you-sure-delete-yes'><span></span><span>Yes</span></li>
+                    <li class='are-you-sure-delete-no'><span></span><span>No</span></li>
+                </ul>
+            </div>
+        </div>
+        <!--Add Habit form-->
+        <div class="plus-btn">
+            <button><i class="fa-solid fa-plus"></i></button>
+        </div>
+        <div class="type-habit-container-modal" id="app">
+            <form id="new-habit-form">
+                <!--Close button-->
+                <span class="close-modal">&times;</span>
+                <!--Habit Name Textbox-->
+                <label for="habit-title" class="add-habit-header"><b>Add Habit</b><br>
+                    <input type="text" id="habit-title" placeholder="Enter a habit" autocomplete="off" required>
+                </label><br>
+
+                <!--Good-Bad Radios-->
+                <label class="radio-container" required>Good Habit
+                    <input type="radio" id="good-habit-radio" name="radio" value="good-habit">
+                    <span class="radio"></span>
+                </label>
+                <label class="radio-container">Bad Habit
+                    <input type="radio" id="bad-habit-radio" name="radio" value="bad-habit">
+                    <span class="radio"></span>
+                </label><br>
+
+                <!--Difficulty Radios-->
+                <p class="add-form-text">Difficulty</p>
+                <!-- <label for="difficulty-title"><br></label> -->
+                <label class="radio-diff-container" required>1
+                    <input type="radio" id="diff-1-radio" name="radio-diff" value="diff-1">
+                    <span class="radio-diff">1</span>
+                </label>
+                <label class="radio-diff-container">2
+                    <input type="radio" id="diff-2-radio" name="radio-diff" value="diff-2">
+                    <span class="radio-diff">2</span>
+                </label>
+                <label class="radio-diff-container">3
+                    <input type="radio" id="diff-3-radio" name="radio-diff" value="diff-3">
+                    <span class="radio-diff">3</span>
+                </label>
+                <label class="radio-diff-container">4
+                    <input type="radio" id="diff-4-radio" name="radio-diff" value="diff-4">
+                    <span class="radio-diff">4</span>
+                </label>
+                <label class="radio-diff-container">5
+                    <input type="radio" id="diff-5-radio" name="radio-diff" value="diff-5">
+                    <span class="radio-diff">5</span>
+                </label><br><br>
+
+                <!--Anticipated Repetitions-->
+                <label for="habit-title"><b class="add-form-text">Anticipated repetitions per &nbsp;</b>
+                    <select id="per-day-week">
+                        <option value="day">Day</option>
+                        <option value="week">Week</option>
+                        <p>&emsp;</p>
+                    </select>
+                    <input type="text" id="habit-repetitions" placeholder="3" autocomplete="off" required>
+                </label><br>
+                <button class="add-btn" id="add-to-list" type="submit">Add</button>
+            </form> <br>
+        </div>
+        <div class="add-previous-completed-modal">
+            <div class="date-picker-modal">
+                <!--Close button-->
+                <span class="close-modal">&times;</span>
+                <p id="habit-name"></p>
+                <p class="add-previous-completed-header">Select date of completion &nbsp;</p>
+                <form id="date-time-select">
+                    <input class="date-picker-control" type="date" placeholder="Select a Date">
+                    <select id="hr-select">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <p>&emsp;</p>
+                    </select>
+                    <div class="hr-min-colon">&nbsp;&nbsp;:</div>
+                    <select id="min-select">
+                        <option value="0">00</option>
+                        <option value="05">05</option>
+                        <option value="10">10</option>
+                        <option value="15">15</option>
+                        <option value="20">20</option>
+                        <option value="25">25</option>
+                        <option value="30">30</option>
+                        <option value="35">35</option>
+                        <option value="40">40</option>
+                        <option value="45">45</option>
+                        <option value="50">50</option>
+                        <option value="55">55</option>
+                        <p>&emsp;</p>
+                    </select>
+                    <select id="am-pm">
+                        <option value="am">AM</option>
+                        <option value="pm">PM</option>
+                        <p>&emsp;</p>
+                    </select>
+                </form>
+                <button class="add-new-rep-btn">Add</button>
+            </div>
+        </div>
+        <!-- <div class="habit-goal-container">
+            <div class="goal-number">3</div>
+            <p class="habit-goal">Habit Goal</p>
+        </div> -->
+    </div>
+</body>
+</html>

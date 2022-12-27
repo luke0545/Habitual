@@ -1,0 +1,540 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@500&family=Comfortaa:wght@600&family=Cormorant:wght@400;600&family=Lato&family=League+Spartan:wght@300&family=Poiret+One&display=swap');
+
+#repetitions-chart
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 20px;
+    width: 250px;
+    height: 520px;
+    max-width: 1000px;
+    max-height: 900px;
+    min-width: 500px;
+    min-height: 550px;
+    margin-top: 0px;
+    margin-right: 45px;
+    /* box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4); */
+}
+#progressChart
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 20px;
+    width: 250px;
+    height: 520px;
+    max-width: 1000px;
+    max-height: 900px;
+    min-width: 650px;
+    min-height: 450px;
+    margin-top: 0px;
+    margin-right: 45px;
+}
+.repetitions-chart-container
+{
+    display: flex;
+    justify-content: center;
+    padding: 75px;
+    padding-top: 25px;
+    margin: 25px, 0px;
+    /* background-color: rgb(35, 42, 47); */
+    overflow-y: none;
+}
+.activity-text
+{
+    font-size: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    font-weight: bold;
+    text-align: center;
+    padding: 0px;
+}
+.habit-select-container
+{
+    position: relative;
+    flex-wrap: none;
+    min-width: 300px;
+    background-color: rgb(41, 47, 57);
+    height: 750px;
+    width: 400px;
+    padding: 25px;
+    padding-top: 0px;
+    overflow-y: scroll;
+    overflow-wrap: normal;
+    scrollbar-width: none;
+    /* OLD scrollbar-color: rgb(179, 195, 215) rgb(246, 234, 234); */
+    scrollbar-color: rgb(120, 130, 142) rgb(205, 195, 195);
+}
+.single-habit-block-select-good
+{
+    position: relative;
+    margin: 15px;
+    padding: 10px;
+    text-align: center;
+    height: 50px;
+    border-radius: 7px;
+    /* OLD background-color: rgb(191, 201, 181); */
+    background-color: rgb(88, 98, 78);
+}
+.single-habit-block-select-bad
+{
+    position: relative;
+    margin: 15px;
+    padding: 10px;
+    text-align: center;
+    height: 50px;
+    border-radius: 7px;
+    /* OLD sbackground-color: rgb(203, 172, 172); */
+    background-color: rgb(109, 78, 78);
+}
+.single-habit-block-select-good:hover
+{
+    background-color: rgb(71, 81, 61);
+    cursor: pointer;
+}
+.single-habit-block-select-bad:hover
+{
+    background-color: rgb(99, 66, 66);
+    cursor: pointer;
+}
+.select-habit-graph-text
+{
+    border-radius: 2px;
+    vertical-align: middle;
+    text-align: center;
+    /* OLD background-color: rgb(246, 234, 234); */
+    background-color: rgb(41, 47, 57);
+    height: 75px;
+    width: 450px;
+    margin-top: 0px;
+    margin-left: 0px;
+    padding: 0px;
+    font-size: 1.3rem;
+    z-index: 1;
+}
+.v-center
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 40%;
+    margin: auto;
+}
+.habit-overview-container
+{
+    width: 1000px;
+    max-width: 1100px;
+    height: 800px;
+    max-height: 850px;
+    margin-left: 60px;
+    padding: 30px;
+    padding-top: 5px;
+    padding-bottom: 15px;
+    /* border: 1px solid rgb(78, 86, 109) */
+}
+.overview-container-header
+{
+    text-align: center;
+    font-size: 32px;
+    letter-spacing: 0.2rem;
+    margin-top: 0px;
+    font-weight: bold;
+}
+
+/* ----- TABS ----- */
+
+.tab {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    width: auto;
+    /* border: 1px solid rgb(94, 94, 94); */
+    background-color: rgb(41, 47, 57);
+
+  }
+.tablinks
+{
+    color: rgb(219, 219, 219);
+}
+  
+  /* Style the buttons inside the tab */
+.tab button 
+{
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.1s;
+    font-size: 17px;
+}
+  
+/* Change background color of buttons on hover */
+.tab button:hover 
+{
+    background-color: rgb(80, 86, 104);
+}
+  
+/* Create an active/current tablink class */
+.tab button.active 
+{
+    background-color: rgb(65, 75, 107);
+}
+  
+/* Style the tab content */
+.tabcontent 
+{
+    display: none;
+    text-align: center;
+    height: 685px;
+    max-height: 685px;
+    width: 1200;
+    padding: 6px 12px;
+    /* border: 1px solid rgb(103, 115, 148); */
+    border-top: none;
+}
+
+/* ------ INFO TAB ------ */
+
+.label-title
+{
+
+    float: left;
+    font-size: 18px;
+    font-weight: bold;
+    padding-left: 15px;
+    padding-top: 10px;
+}
+.result-number
+{
+    position: relative;
+    float: right;
+    font-size: 36px;
+    margin-top: 13px;
+    margin-right: 0px;
+    margin-bottom: auto;
+    color: rgb(107, 128, 192);
+}
+#date-added
+{
+    margin-top: 22px;
+    font-size: 22px;
+}
+.result-text
+{
+    float: right;
+    padding: 15px;
+    color: rgb(107, 128, 192);
+}
+.info-hr
+{
+    display: block;
+    position: relative;
+    margin-top: 90px;
+}
+#Info
+{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    min-width: 350px;
+    height: 100%;
+    align-items: center;
+}
+.percent-increase-week
+{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 23px;
+    font-weight: bold;
+    color:rgb(62, 135, 71);
+    user-select: none;
+}
+.percent-decrease-week
+{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 23px;
+    font-weight: bold;
+    color:rgb(152, 68, 68);
+    user-select: none;
+}
+
+/* ----- MONTHLY CALENDAR ----- */
+
+@media screen and (min-width: 1775px)
+{
+    .calendar-info-box
+    {
+        display: none;
+        flex-wrap: wrap;
+        float: left;
+        height: 50px;
+        width:50px;
+        background-color: aliceblue;
+    }
+    .calendar-container
+    {
+        width: 100%;
+        height: 100%;
+        display: table;
+        flex-wrap: wrap;
+        float: right;
+        margin-top: 0px;
+        background-color: rgb(31, 31, 31);
+    }
+
+}
+
+#month
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+.calendar-container
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+    background-color: rgb(31, 31, 31);
+}
+.calendar
+{
+    max-width: 45rem;
+    min-width: 22.5rem;
+    max-height: 42rem;
+    min-height: 21rem;
+    /* background-color: rgba(54, 64, 82, 0.0); */
+    box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
+}
+.month
+{
+    height: 6rem;
+    /* background-color: rgba(46, 57, 89, 0.0); */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    text-align: center;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+.month i
+{
+    font-size: 1.3rem;
+    padding: 15px;
+    cursor: pointer;
+}
+.month h1
+{
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    margin-bottom: 1rem;
+}
+.month p
+{
+    font-size: 1.1rem;
+}
+
+
+#week-arrow-left
+{
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+#week-arrow-right
+{
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+#Week
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+    background-color: rgb(31, 31, 31);
+}
+#Week h3
+{
+    font-weight: 500;
+    font-size: 24px;
+    text-transform: capitalize;
+    letter-spacing: 0.1rem;
+    margin-bottom: 1rem;
+}
+.week-header-container
+{
+    height: 6rem;
+    /* background-color: rgba(46, 57, 89, 0.0); */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    text-align: center;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+    margin-right: 25px;
+}
+#week-header
+{
+    padding: 15px;
+    user-select: none;
+    transition: color 0.1s;
+}
+#week-header:hover
+{
+    cursor: pointer;
+    color: rgb(167, 178, 187);
+}
+.week-header-container i
+{
+    padding: 15px;
+}
+
+
+.weekdays
+{
+    width: 100%;
+    height: 5rem;
+    padding: 0 0.4rem;
+    display: flex;
+    align-items: center;
+}
+.weekdays div
+{
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    width: calc(44.2rem/7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+.days
+{
+    width: 100%;
+    height: 30rem;
+    display: flex;
+    flex-wrap: wrap;
+    padding: .2rem;
+}
+.days div
+{
+    font-size: 1.2 rem;
+    font-weight: 300;
+    margin: 0.15rem;
+    width: calc(40.2rem/7);
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+    border: 0.15rem solid rgb(68, 85, 135);
+    transition: background-color 0.1s;
+    user-select: none;
+}
+.days div:hover
+{
+    cursor: pointer;
+}
+.completed-goal-day
+{
+    position: relative;
+    font-size: 16px;
+    background-color: rgba(64, 88, 67, 1);
+    border: 0.15rem solid rgb(41, 69, 44);
+}
+.completed-goal-day-bad
+{
+    position: relative;
+    font-size: 16px;
+    background-color: rgb(87, 52, 52);
+    border: 0.15rem solid rgb(50, 30, 30);
+}
+.completed-goal-day:hover
+{
+    background-color: rgb(41, 69, 44);
+}
+.partial-complete-goal-day
+{
+    position: relative;
+    background-color: rgb(97, 90, 0);
+    border: 0.15rem solid rgb(82, 77, 48);
+    transition: 1s;
+}
+.partial-complete-goal-day h3, .completed-goal-day h3
+{
+    position: relative;
+    margin: auto;
+    text-align: center;
+    font-weight: 500;
+    align-items: center;
+    font-size: 18px;
+    margin-left: 40%;
+}
+.partial-complete-goal-day:hover
+{
+    background-color: rgb(75, 70, 0);
+}
+.days div:hover:not(.today, .completed-goal-day, .partial-complete-goal-day)
+{
+    background-color: rgba(56, 71, 126, 0.5);
+}
+.prev-date, .next-date
+{
+    opacity: 0.5;
+}
+.today
+{
+    background-color: rgb(56, 71, 126);
+}
+.today:hover
+{
+    background-color: rgb(39, 49, 88);
+}
+.day-rep-count-hover
+{
+    visibility: hidden;
+    position: absolute;
+    font-size: 18px;
+    bottom: 75px;
+    background-color: rgb(39, 49, 88);
+    border-radius: 10px;
+}
+.day-rep-count-hover:hover
+{
+    visibility: hidden !important;
+}
+.day-rep-count-hover i
+{
+    visibility: hidden;
+    position: absolute;
+    font-size: 25px;
+    color: rgb(39, 49, 88);
+    border: none;
+    margin: auto;
+    top: 55px;
+}
+.added-goal-day h3
+{
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+}
