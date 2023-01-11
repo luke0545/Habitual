@@ -3,7 +3,7 @@ Track your habits - good or bad - to see your personal growth in real time
 
 Very early stages..
 
-Home page
+Home page - click square on left of habit to increment repetition - numbers reset daily
 ![Home_Page](https://user-images.githubusercontent.com/56170386/211930286-503d3355-5c37-4345-9815-7bf1a53494df.JPG)
 
 New habit form
