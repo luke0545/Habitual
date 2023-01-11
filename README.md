@@ -1,0 +1,22 @@
+# Habitual
+Track your habits - good or bad - to see your personal growth in real time
+
+Very early stages..
+
+Home page
+![Home_Page](https://user-images.githubusercontent.com/56170386/211930286-503d3355-5c37-4345-9815-7bf1a53494df.JPG)
+
+Custom context menu
+![Home_Context_Menu](https://user-images.githubusercontent.com/56170386/211930333-b48b10f9-4b11-4e10-830e-ec6ccbf58fe9.JPG)
+
+Activity per week
+![Activity_Week](https://user-images.githubusercontent.com/56170386/211930429-e051e281-ec39-4518-ac45-97715dbdb8e0.JPG)
+
+Overall progress toward creating habit
+![Activity_Progress](https://user-images.githubusercontent.com/56170386/211930451-a64cae2d-b262-48c6-8605-190b883c7fbe.JPG)
+
+Activity per month
+![Activity_Month](https://user-images.githubusercontent.com/56170386/211930474-af8fd38a-ceb2-4246-b197-f4efafa1659b.JPG)
+
+General info per habit
+![Activity_Info](https://user-images.githubusercontent.com/56170386/211930493-5071c4be-da44-476a-8951-721516e7ffeb.JPG)
