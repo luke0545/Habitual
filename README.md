@@ -26,5 +26,6 @@ General info per habit
 ![Activity_Info](https://user-images.githubusercontent.com/56170386/211930493-5071c4be-da44-476a-8951-721516e7ffeb.JPG)
 
 ER Diagram rendered in MySQL Workbench
+
 ![ER Diagram](https://user-images.githubusercontent.com/56170386/213772790-afc21875-b7f4-4e7a-b3d2-caa788f4f204.JPG)
 
