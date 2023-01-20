@@ -24,3 +24,6 @@ Activity per month - yellow/green depending whether daily goal was met - click o
 
 General info per habit
 ![Activity_Info](https://user-images.githubusercontent.com/56170386/211930493-5071c4be-da44-476a-8951-721516e7ffeb.JPG)
+
+ER Diagram rendered in MySQL Workbench
+![Screen 1@1x](https://user-images.githubusercontent.com/56170386/213772390-f4778b82-3fbd-4e69-8b39-56add176dd94.png)
