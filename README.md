@@ -16,7 +16,7 @@ Custom context menu
 Activity per week - red/green depending whether daily goal was met
 ![Activity_Week](https://user-images.githubusercontent.com/56170386/211930429-e051e281-ec39-4518-ac45-97715dbdb8e0.JPG)
 
-Overall progress toward creating habit (not reflective of my actual habits LOL)
+Overall progress toward creating habit (not reflective of my actual habits lol)
 ![Activity_Progress](https://user-images.githubusercontent.com/56170386/211930451-a64cae2d-b262-48c6-8605-190b883c7fbe.JPG)
 
 Activity per month - yellow/green depending whether daily goal was met - click on date to view that week's chart
